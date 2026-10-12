@@ -1,8 +1,9 @@
-# T-Camera S3 Hardware Test
+# T-Camera S3 Camera Pipeline
 
-ESP-IDF firmware for exercising the camera, SSD1306 OLED, and AXP2101 PMU on
-the LILYGO T-Camera S3. The pin mapping follows LilyGO's official repository;
-the current configuration targets the V1.6 board.
+ESP-IDF firmware for the camera capture and JPEG preprocessing pipeline, with
+optional SSD1306 OLED and AXP2101 PMU support, on the LILYGO T-Camera S3. The
+pin mapping follows LilyGO's official repository; the current configuration
+targets the V1.6 board.
 
 ## Project layout
 
@@ -10,7 +11,9 @@ the current configuration targets the V1.6 board.
 components/
 ├── axp2101/          PMU chip-ID driver
 ├── board_support/    Board pinout and hardware configuration
-├── camera_test/      Camera capture test and frame-rate reporting
+├── camera_driver/    Reusable camera lifecycle and latest-frame capture
+├── camera_pipeline/  Camera capture plus image preprocessing orchestration
+├── image_preprocessor/ Bounded JPEG decode, resize, and pixel conversion
 ├── i2c_bus/          Shared I2C bus lifecycle and register access
 └── ssd1306/          OLED initialization and test-pattern driver
 main/
@@ -47,14 +50,20 @@ idf.py -p /dev/ttyACM0 monitor
   ALDO1 at 1500 mV, ALDO2 at 3000 mV, and ALDO4 at 3000 mV. Other PMU rails are
   not modified.
 - LilyGO's separate minimal-camera example uses a different ALDO1/ALDO2
-  voltage pair. This diagnostic follows the full factory power setup; do not
+  voltage pair. This setup follows the full factory power configuration; do not
   combine the two presets without confirming the required camera module rails.
-- The camera test runs for at least 30 seconds at QVGA JPEG and reports
-  frame dimensions, format, frame length, capture failures, and approximate
-  FPS.
+- The boot-time preprocessing validation runs for at least 30 seconds at
+  QVGA JPEG. It decodes, resizes to 160x120, converts to RGB565, and reports
+  processed and failed frames plus output size. It requests each frame only
+  when ready, returns the camera-owned frame buffer before JPEG decoding, and
+  uses the camera driver's latest-frame mode rather than a timed capture queue.
+- The reusable image preprocessor supports configurable output dimensions and
+  RGB888, RGB565, or grayscale output. JPEG input, decode pixels, and output
+  pixels each have explicit allocation limits; working buffers are allocated
+  once and reused. No AI inference is included.
 
-See [docs/hardware-test.md](docs/hardware-test.md) for the expected log
-sequence and hardware test procedure.
+See [docs/hardware-test.md](docs/hardware-test.md) for the 30-second hardware
+validation procedure and expected log sequence.
 
 ## Board reference
 

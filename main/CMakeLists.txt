@@ -4,7 +4,8 @@ idf_component_register(
     REQUIRES
         axp2101
         board_support
-        camera_test
+        camera_pipeline
         i2c_bus
+        esp_timer
         ssd1306
 )
