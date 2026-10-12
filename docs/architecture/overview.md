@@ -4,7 +4,7 @@ The firmware configures board peripherals, starts the camera and reusable
 preprocessing pipeline, and repeatedly requests one image at a time while the
 30-second validation is active.
 
-![Camera image preprocessing flow: OV2640 JPEG capture, prompt frame-buffer release, bounded JPEG decode, resize and RGB565 conversion](/pipeline.svg)
+![PathSee image preprocessing flow: OV2640 JPEG capture, prompt frame-buffer release, bounded JPEG decode, resize and RGB565 conversion](/hero-pipeline.svg)
 
 The application also initializes the optional SSD1306 OLED and AXP2101 PMU over
 the board's I²C bus. Those peripherals are not part of the image data path.

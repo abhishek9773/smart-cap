@@ -1,14 +1,18 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Smart Cap',
+  title: 'PathSee',
   base: '/',
   description:
-    'Developer documentation for the Smart Cap assistive-device prototype.',
+    'Developer documentation for the PathSee assistive-device prototype.',
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
-    siteTitle: 'Smart Cap',
+    siteTitle: 'PathSee',
+    logo: {
+      src: '/pathsee-logo.png',
+      alt: 'PathSee — Vision Beyond Barriers',
+    },
     nav: [
       { text: 'Guide', link: '/getting-started/introduction' },
       { text: 'Architecture', link: '/architecture/overview' },
@@ -19,7 +23,7 @@ export default defineConfig({
       {
         icon: 'github',
         link: 'https://github.com/abhishek9773/smart-cap',
-        ariaLabel: 'Smart Cap on GitHub',
+        ariaLabel: 'PathSee on GitHub',
       },
     ],
     search: {

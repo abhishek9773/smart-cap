@@ -14,7 +14,7 @@ an ESP32-S3 and OV2640 camera.
 | Camera XCLK | 20 MHz |
 
 The pin mapping is defined in
-[`components/board_support/include/board_config.h`](../../components/board_support/include/board_config.h).
+[`components/board_support/include/board_config.h`](https://github.com/abhishek9773/smart-cap/blob/main/components/board_support/include/board_config.h).
 The board revision matters: use the V1.6 mapping and consult the board
 manufacturer's documentation before applying it to another revision.
 

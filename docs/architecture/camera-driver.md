@@ -14,7 +14,7 @@ The board mapping and capture policy are kept in the driver configuration:
 - Application calls acquire/release to make ownership explicit.
 
 The driver uses the verified board pin constants in
-[`board_config.h`](../../components/board_support/include/board_config.h).
+[`board_config.h`](https://github.com/abhishek9773/smart-cap/blob/main/components/board_support/include/board_config.h).
 Refer to [the exact mapping](/hardware/pins) before making board-specific
 changes.
 

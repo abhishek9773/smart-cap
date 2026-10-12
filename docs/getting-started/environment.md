@@ -6,8 +6,8 @@ The repository also includes an ESP-IDF VS Code dev-container configuration.
 
 The ESP-IDF component manager resolves the camera driver and JPEG decoder
 dependencies from the project manifests. The committed
-[`dependencies.lock`](../../dependencies.lock) records the resolved component
-versions.
+[`dependencies.lock`](https://github.com/abhishek9773/smart-cap/blob/main/dependencies.lock)
+records the resolved component versions.
 
 The documentation site is a Node.js/VitePress project under `docs/`; it does
 not configure or build the firmware.

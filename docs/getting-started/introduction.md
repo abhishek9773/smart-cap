@@ -1,6 +1,6 @@
 # Introduction
 
-Smart Cap is an open embedded-systems prototype exploring a camera-based
+PathSee is an open embedded-systems prototype exploring a camera-based
 assistive device for people with visual impairments. The intended direction is
 to interpret nearby scenes and communicate concise, useful information.
 

@@ -39,7 +39,7 @@ verification result was recorded.
 
 This result demonstrates a successful recorded hardware preprocessing run. It
 does not guarantee future runs, extended stability, performance under a
-different scene or configuration, production readiness, or complete Smart Cap
+different scene or configuration, production readiness, or complete PathSee
 functionality. No AI detection, distance estimation, or voice guidance was
 tested.
 

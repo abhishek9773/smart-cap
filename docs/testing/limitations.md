@@ -1,6 +1,6 @@
 # Current limitations
 
-The Smart Cap is an embedded camera and image-preprocessing prototype. The
+PathSee is currently an embedded camera and image-preprocessing prototype. The
 complete assistive system is not yet finished.
 
 ## Not implemented or validated

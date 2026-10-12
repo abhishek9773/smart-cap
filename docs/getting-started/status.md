@@ -1,7 +1,7 @@
 # Project status
 
 The current repository is a camera and image-preprocessing prototype. The
-complete assistive Smart Cap system is **not yet finished** and is not
+complete PathSee assistive system is **not yet finished** and is not
 production-ready.
 
 ## Implemented and verified in the current firmware
