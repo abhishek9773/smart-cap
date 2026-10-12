@@ -5,6 +5,13 @@ optional SSD1306 OLED and AXP2101 PMU support, on the LILYGO T-Camera S3. The
 pin mapping follows LilyGO's official repository; the current configuration
 targets the V1.6 board.
 
+## Documentation website
+
+The developer documentation site is maintained entirely in [`docs/`](docs/).
+See the [local development guide](docs/development/workflow.md) for
+installation, local preview, and static build commands. The site is independent
+of the ESP-IDF firmware build.
+
 ## Project layout
 
 ```text
