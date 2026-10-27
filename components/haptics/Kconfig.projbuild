@@ -1,0 +1,17 @@
+menu "Smart Cap Haptics"
+
+config SMARTCAP_HAPTIC_TEST_ENABLE
+    bool "Enable repeating vibration-module hardware test"
+    default n
+    help
+        Starts the GPIO15/GPIO16 motor test after application initialization.
+        Leave disabled for normal firmware operation.
+
+config SMARTCAP_HAPTIC_ACTIVE_HIGH
+    bool "Motor module IN is active high"
+    default y
+    help
+        Disable this option if the motor module activates when IN is low.
+        Confirm the module's actual documentation before changing this setting.
+
+endmenu

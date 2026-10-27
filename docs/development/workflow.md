@@ -36,6 +36,15 @@ The build writes static files into `.vitepress/dist/`, ignored by this site's
 `.gitignore`. Preview serves that generated output locally. No deployment or
 external hosting is performed by these commands.
 
+## Vercel deployment
+
+The repository-root `vercel.json` configures Vercel to install this site's
+dependencies from `docs/`, build the VitePress site from `docs/`, and publish
+`docs/.vitepress/dist/`. Keep the Vercel project root set to the repository
+root so these paths match. Do not override the output directory with
+`.vitepress/dist` or set the project root to `docs` while using this
+repository-root configuration.
+
 ## Firmware commands are separate
 
 Firmware compilation and hardware operation use ESP-IDF commands from the

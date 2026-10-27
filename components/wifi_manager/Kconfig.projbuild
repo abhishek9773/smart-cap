@@ -1,0 +1,18 @@
+menu "Smart Cap Wi-Fi AP"
+
+config SMARTCAP_WIFI_SSID
+    string "Access point SSID"
+    default "SMARTCAP_TEST"
+
+config SMARTCAP_WIFI_PASSWORD
+    string "Access point password"
+    default "smartcap123"
+    help
+        Use at least 8 characters for WPA2. This default is for development
+        only; set a unique password for each deployed prototype.
+
+config SMARTCAP_WIFI_IP
+    string "Access point IPv4 address"
+    default "192.168.4.1"
+
+endmenu

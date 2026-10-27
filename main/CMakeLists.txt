@@ -1,11 +1,17 @@
 idf_component_register(
-    SRCS "main.c"
+    SRCS "app_main.c" "app_init.c"
     INCLUDE_DIRS "."
     REQUIRES
-        axp2101
         board_support
-        camera_pipeline
-        i2c_bus
-        esp_timer
-        ssd1306
+        http_api
+        audio_player
+        button_manager
+        camera_driver
+        event_manager
+        freertos
+        haptics
+        log
+        sensor_manager
+        system_status
+        wifi_manager
 )

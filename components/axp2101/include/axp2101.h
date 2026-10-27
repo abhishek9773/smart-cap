@@ -8,5 +8,5 @@
 esp_err_t axp2101_read_chip_id(
     i2c_master_dev_handle_t device,
     uint8_t *chip_id);
-esp_err_t axp2101_configure_camera_rails(
+esp_err_t axp2101_configure_board_rails(
     i2c_master_dev_handle_t device);
